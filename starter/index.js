@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
-const teamMembers=[];
+const teamMembers = [];
 
 function promptUser() {
   inquirer
@@ -32,34 +32,33 @@ function promptUser() {
         name: "email",
       },
       {
-        type: "list",
-        message: "Which type of team member would you like to add?",
-        choices: ["Engineer", "Intern", "Finish building the team"],
-        name: "role",
+        type: "input",
+        message: "What is the manager's office number?",
+        name: "officeNumber",
       },
     ])
     .then(function (answers) {
+      const manager = new Manager(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.officeNumber
+      );
+      teamMembers.push(manager);
+      promptUser();
+    })
+
+    .then(function (answers) {
+      inquirer.prompt([
+        {
+          type: "list",
+          message: "Which type of team member would you like to add?",
+          choices: ["Engineer", "Intern", "Finish building the team"],
+          name: "role",
+        },
+      ]);
+
       switch (answers.role) {
-        case "Manager":
-          inquirer
-            .prompt([
-              {
-                type: "input",
-                message: "What is the manager's office number?",
-                name: "officeNumber",
-              },
-            ])
-            .then(function (managerAnswers) {
-              const manager = new Manager(
-                answers.name,
-                answers.id,
-                answers.email,
-                managerAnswers.officeNumber
-              );
-              teamMembers.push(manager);
-              promptUser();
-            });
-          break;
         case "Engineer":
           inquirer
             .prompt([
@@ -69,15 +68,22 @@ function promptUser() {
                 name: "github",
               },
             ])
-            .then(function (engineerAnswers) {
+            .then(function (answers) {
               const engineer = new Engineer(
                 answers.name,
                 answers.id,
                 answers.email,
-                engineerAnswers.github
+                answers.github
               );
               teamMembers.push(engineer);
-              promptUser();
+              inquirer.prompt([
+                {
+                  type: "list",
+                  message: "Which type of team member would you like to add?",
+                  choices: ["Engineer", "Intern", "Finish building the team"],
+                  name: "role",
+                },
+              ]);
             });
           break;
         case "Intern":
@@ -89,15 +95,22 @@ function promptUser() {
                 name: "school",
               },
             ])
-            .then(function (internAnswers) {
+            .then(function (answers) {
               const intern = new Intern(
                 answers.name,
                 answers.id,
                 answers.email,
-                internAnswers.school
+                answers.school
               );
               teamMembers.push(intern);
-              promptUser();
+              inquirer.prompt([
+                {
+                  type: "list",
+                  message: "Which type of team member would you like to add?",
+                  choices: ["Engineer", "Intern", "Finish building the team"],
+                  name: "role",
+                },
+              ]);
             });
           break;
         default:
