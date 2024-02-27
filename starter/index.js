@@ -56,19 +56,20 @@ function promptUser() {
           choices: ["Engineer", "Intern", "Finish building the team"],
           name: "role",
         },
-      ]);
+      ])
 
-      switch (answers.role) {
-        case "Engineer":
-          inquirer
-            .prompt([
-              {
-                type: "input",
-                message: "What is the engineer's GitHub username?",
-                name: "github",
-              },
-            ])
+     
             .then(function (answers) {
+              switch (answers.role) {
+                case "Engineer":
+                  inquirer
+                    .prompt([
+                      {
+                        type: "input",
+                        message: "What is the engineer's GitHub username?",
+                        name: "github",
+                      },
+                    ])
               const engineer = new Engineer(
                 answers.name,
                 answers.id,
@@ -100,7 +101,7 @@ function promptUser() {
                 answers.name,
                 answers.id,
                 answers.email,
-                answers.school
+                internAnswers.school
               );
               teamMembers.push(intern);
               inquirer.prompt([

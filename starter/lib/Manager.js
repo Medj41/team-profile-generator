@@ -24,7 +24,7 @@ class Manager extends Employee {
 
 
 
-        return Manager;
+        return "Manager";
     }
 
 

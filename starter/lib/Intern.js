@@ -27,7 +27,7 @@ class Intern extends Employee {
 
 
 
-        return Intern;
+        return "Intern";
     }
 
 
