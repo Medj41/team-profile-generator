@@ -114,6 +114,8 @@ function promptUser() {
           answers.github
         );
         teamMembers.push(engineer);
+        init();
+
       })};
 
       function addIntern (){
@@ -149,12 +151,14 @@ function promptUser() {
             answers.school
           );
           teamMembers.push(intern);
+          init();
+
         });
       };
 
       function buildTeam(){
         const html = render(teamMembers);
-        fs.writeFile("./output/team.html", html, function (err) {
+        fs.writeFile("team.html", html, function (err) {
           if (err) {
             console.log(err);
           } else {
