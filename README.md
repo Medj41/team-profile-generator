@@ -18,33 +18,30 @@ Please find a sceanshot for teh final result.
 ## licence
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
-## licence
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)
-![Uploading Image 02-03-2024 at 02.27.jpg…]()
 
 ##  instalation
 Once you've followed the steps mentioned:
 
 Check Node.js Installation:
-To check if Node.js is installed on your system, open your command line interface and type the following command:
+-To check if Node.js is installed on your system, open your command line interface and type the following command:
 bash
-Copy code
-node -v
-Example output (if Node.js is installed):
-Copy code
-v14.15.1
-Install Node.js if Not Installed:
-If Node.js is not installed, please visit the Node.js website to download and install it.
-Clone Project Repository:
-After ensuring Node.js is installed, clone the project repository onto your computer. Use the git clone command followed by the repository URL. For example:
-bash
-Copy code
-git clone https://github.com/your-username/your-project.git
-This command will create a local copy of the repository in your current directory.
-These steps ensure that you have the necessary prerequisites and project files set up on your system for further development or usage.
+-Copy code
+-node -v
+-Example output (if Node.js is installed):
+-Copy code
+-v14.15.1
+-Install Node.js if Not Installed:
+-If Node.js is not installed, please visit the Node.js website to download and install it.
+-Clone Project Repository:
+-After ensuring Node.js is installed, clone the project repository onto your computer. Use the git clone command followed by the repository URL. For example:
+-bash
+-Copy code
+-git clone https://github.com/your-username/your-project.git
+-This command will create a local copy of the repository in your current directory.
+-These steps ensure that you have the necessary prerequisites and project files set up on your system for further development or usage.
 
 ## Usage
-run node index in your terminal 
-add the information of the manager 
-add as many engeneer as you need in your team
-add as many internal as you need in your teamthe final step is when youre finished choose "Finish building the team".
+-run node index in your terminal 
+-add the information of the manager 
+-add as many engeneer as you need in your team
+-add as many internal as you need in your teamthe final step is when youre finished choose "Finish building the team".
