@@ -8,6 +8,7 @@ This App  aim to create a webpage showcasing my team's essential information, en
 Please find attched a video showing how to use the APP
 https://drive.google.com/file/d/1g035940wflJ7FEOYptb58C2ZVeuVdnWL/view
 
+https://github.com/Medj41/team-profile-generator/assets/127996990/9dcd7ce7-a29c-40bb-a16e-f7bc773c8c2c
 
 Please find a sceanshot for teh final result.
 ![Image 02-03-2024 at 02 27](https://github.com/Medj41/team-profile-generator/assets/127996990/5b394fc8-de39-4e6e-badc-1778304d0fd2)
