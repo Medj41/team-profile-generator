@@ -1,6 +1,6 @@
 
-#Name
-team-profile-generator
+
+#team-profile-generator
 ## Description
 This App  aim to create a webpage showcasing my team's essential information, enabling users to easily access their emails and GitHub profiles.
 
